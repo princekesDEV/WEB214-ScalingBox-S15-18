@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scaling Box</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #main {
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    #main > div {
+        background-color: black;
+        border-right: 2px solid goldenrod;
+        border-bottom: 2px solid goldenrod;
+        height: 80vh;
+        width: 50vw;
+        border-radius: 12px;
+        box-shadow: rgba(227, 4, 212, 0.945) 10px 14px 15px,
+        rgba(227, 4, 212, 0.945) 0px -12px 30px,
+        rgba(227, 4, 212, 0.945) 0px 4px 6px,
+        rgba(227, 4, 212, 0.945) 0px 12px 13px,
+        rgba(227, 4, 212, 0.945) 0px -3px 5px;
+        transition: transform 1s ease-in, opacity 1s ease-in;
+      }
+
+      #main > div:hover{
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div></div>
+    </div>
+  </body>
+</html>
